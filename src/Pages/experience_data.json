@@ -1,0 +1,63 @@
+[
+    
+    {
+        "id": 1,
+        "firstDate": "February",
+        "firstNumb": 2021,
+        "secondDate": "July",
+        "secondNumb": 2021,
+        "profession": "Junior Full-Stack Developer",
+        "place": "Startel Solutions -",
+        "secondPlace": "Torri di Quartesolo, Italy"
+    },
+    {
+        "id": 2,
+        "firstDate": "Agust",
+        "firstNumb": 2020,
+        "secondDate": "October",
+        "secondNumb": 2020,
+        "profession": "Employee",
+        "place": "Cantine Vitevis -",
+        "secondPlace": "Montecchio Maggiore, Italy"
+    },
+    {
+        "id": 3,
+        "firstDate": "Agust",
+        "firstNumb": 2019,
+        "secondDate": "July",
+        "secondNumb": 2020,
+        "profession": "Pizza Maker",
+        "place": "Green Pizza Snc -",
+        "secondPlace": "Thiene, Italy"
+    },
+    {
+        "id": 4,
+        "firstDate": "January",
+        "firstNumb": 2018,
+        "secondDate": "July",
+        "secondNumb": 2018,
+        "profession": "Erasmus, Universidad de Las Palmas de Gran Canaria",
+        "place": "University of Computer Science -",
+        "secondPlace": "Las Palmas of Gran Canaria, Spain "
+    },
+    {
+        "id": 5,
+        "firstDate": "October",
+        "firstNumb": 2017,
+        "secondDate": "January",
+        "secondNumb": 2019,
+        "profession": "Pizza Maker",
+        "place": "Top Pizza Snc -",
+        "secondPlace": "Montecchio Maggiore, Italia "
+    },
+    {
+        "id": 6,
+        "firstDate": "June",
+        "firstNumb": 2015,
+        "secondDate": "July",
+        "secondNumb": 2015,
+        "profession": "Erasmus, Enectivia",
+        "place": "Qualo training & mobility -",
+        "secondPlace": "Prague, Czech Republic"
+    }
+]
