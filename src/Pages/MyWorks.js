@@ -26,7 +26,7 @@ function MyWorks() {
 						<h3 className="portfolio-item-title">
 							education course website
 						</h3>
-						<button type="button" className="p-btn view-project-btn">
+						<button type="button" className="btn view-project-btn">
 							view project
 						</button>
 						<div className="portfolio-item-details">
