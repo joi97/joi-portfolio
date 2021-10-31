@@ -54,8 +54,9 @@ function MyWorks() {
 					</div>
                     {/* portfolio end */}
                     
+					{/* nuova modifica */}
                     {/* portofolio start */}
-					<div className="portfolio-item">
+					{/* <div className="portfolio-item">
 						<div className="portfolio-item-thumbnail">
 							<img src="" alt="portfolio"></img>
 						</div>
@@ -87,7 +88,7 @@ function MyWorks() {
 								</ul>
 							</div>
 						</div>
-					</div>
+					</div> */}
                     {/* portfolio end */}
 				</div>
 			</div>
