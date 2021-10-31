@@ -1,8 +1,6 @@
 import { Facebook, Instagram } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import img1 from "../../src/imgFinale.png";
-// import AboutPage from "./AboutPage"
-// import "./mainpage.css"
 
 function HomePage({ setPageCurrent }) {
 	return (
@@ -12,6 +10,8 @@ function HomePage({ setPageCurrent }) {
 				<div className="circle-2"></div>
 				<div className="circle-3"></div>
 				<div className="circle-4"></div>
+				<div className="circle-5"></div>
+				<div className="circle-6"></div>
 			</div>
 			<section className="home-section">
 				<div className="container">
@@ -25,7 +25,10 @@ function HomePage({ setPageCurrent }) {
 								<button className="p-btn">More over me</button>
 							</Link>
 
-							<button className="p-btn tooltip">  Portfolio </button> 
+
+							<Link to="/my-works">
+								<button className="p-btn">Portfolio</button>
+							</Link>
                             {/* <span className="tooltiptext"> [to Complete..]</span>  */}
 						</div>
 						<div className="home_img">

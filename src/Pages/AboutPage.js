@@ -9,10 +9,10 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import { LocalGasStation } from "@material-ui/icons";
-
+import styled from "styled-components";
+import { useSpring, animated, config } from "react-spring";
 
 function Experience({ experienceData }) {
-
 	return (
 		<div className="tab-content">
 			<div className="timeline">
@@ -87,20 +87,46 @@ function Education() {
 	);
 }
 
+const Container = styled(animated.div)``;
+
+// display: inline-block;
+// padding: 3em;
+// background: #c7d2fe66;
+// border-radius: 10px;
+// z-index: 1;
+// position: relative;
+// backdrop-filter: blur(10px);
+// border: 2px solid transparent;
+// background-clip: border-box;
+// cursor: pointer;
+const calc = (x, y) => [
+	-(y - window.innerHeight / 2) / 20,
+	(x - window.innerWidth / 2) / 20,
+	1,
+];
+const trans = (x, y, s) =>
+	`perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
 export default function AboutPage(setPageCurrent, HomePage) {
 	const [showEducation, setShowEducation] = useState(true);
 	const [experienceData, setExperienceData] = useState(JsonData.slice(0, 3));
-	let btn_name1, btn_name2=""
+	let btn_name1,
+		btn_name2 = "";
 
-
-	if(experienceData[0].id === 1){
-		btn_name1 = "pi pi-chevron-left active"
-		btn_name2 = "pi pi-chevron-right disabled"
-	}else{
-		btn_name1 = "pi pi-chevron-left disabled"
-		btn_name2 = "pi pi-chevron-right active"
+	if (experienceData[0].id === 1) {
+		btn_name1 = "pi pi-chevron-left active";
+		btn_name2 = "pi pi-chevron-right disabled";
+	} else {
+		btn_name1 = "pi pi-chevron-left disabled";
+		btn_name2 = "pi pi-chevron-right active";
 	}
 
+	// const [props, set] = useSpring(()=>({xys: [0,0,1], config: {mass: 10, tension: 200, friction: 50}}))
+
+	const [props, set] = useSpring(() => ({
+		xys: [0, 0, 1],
+		config: { mass: 10, tension: 200, friction: 50 },
+	}));
 
 	return (
 		<section className="about-section sec-padding">
@@ -114,9 +140,27 @@ export default function AboutPage(setPageCurrent, HomePage) {
 					</div>
 				</div>
 				<div className="row">
-					<div className="about-img">
-						<img src={fotoProfilo} alt="about " />
+					<div className="about-img-button">
+						<animated.div
+							className="about-img"
+							onMouseMove={({ clientX: x, clientY: y }) =>
+								set({ xys: calc(x, y) })
+							}
+							onMouseLeave={() => set({ xys: [0, 0, 1] })}
+							style={{
+								transform: props.xys.interpolate(trans),
+							}}
+						>
+							
+							{/* <div className="div-overme">over me</div> */}
+							<img src={fotoProfilo} />
+						</animated.div>
+
+						<button className="p-btn" style={{ margin: "20px" }}>
+							Download CV
+						</button>
 					</div>
+
 					<div className="about-text">
 						<p>
 							I have a degree in Computer Science at the
@@ -130,7 +174,7 @@ export default function AboutPage(setPageCurrent, HomePage) {
 							myself and not make me miss anything. I love playing
 							sports and learning new things.
 						</p>
-						<h3>skills</h3>
+						<h3 style={{ textAlignLast: "center" }}>skills</h3>
 						<div className="skills">
 							<div className="skill-item">Html</div>
 							<div className="skill-item">CSS</div>
@@ -196,7 +240,7 @@ export default function AboutPage(setPageCurrent, HomePage) {
 							{!showEducation && (
 								<>
 									<i
-										className= {btn_name1} 
+										className={btn_name1}
 										onClick={() => {
 											setExperienceData(
 												JsonData.slice(0, 3)
@@ -205,7 +249,7 @@ export default function AboutPage(setPageCurrent, HomePage) {
 									></i>
 
 									<i
-										className= {btn_name2}
+										className={btn_name2}
 										onClick={() => {
 											setExperienceData(
 												JsonData.slice(3, 6)
@@ -225,46 +269,4 @@ export default function AboutPage(setPageCurrent, HomePage) {
 			</div>
 		</section>
 	);
-}
-
-{
-	/* 
-
-	    color: var(--blue-dark);
-
-				<div className="timeline-item">
-					<span className="date">October <strong>2017</strong> – January <strong>2019</strong></span>
-					<h4>Pizza Maker</h4>
-					<div>Top Pizza Snc - <small>Montecchio Maggiore, Italia </small></div>
-				</div>
-
-				<div className="timeline-item">
-					<span className="date">January <strong>2018</strong> – July <strong>2018</strong></span>
-					<h4>Erasmus, Universidad de Las Palmas de Gran Canaria</h4>
-					<div>University of Computer Science - <small>Las Palmas of Gran Canaria, Spain </small></div>
-				</div>
-
-				<div className="timeline-item">
-					<span className="date">Agust <strong>2019</strong> – July <strong>2020</strong></span>
-					<h4>Pizza Maker</h4>
-					<div>Green Pizza Snc - <small>Thiene, Italy </small></div>
-				</div>
-
-				<div className="timeline-item">
-					<span className="date">Agust <strong>2020</strong> – October <strong>2020</strong></span>
-					<h4>Employee</h4>
-					<div>Cantine Vitevis - <small>Montecchio Maggiore, Italy </small></div>
-				</div>
-
-				<div className="timeline-item">
-					<span className="date">November <strong>2020</strong> – January <strong>2021</strong></span>
-					<h4>Pizza Maker</h4>
-					<div>Top Pizza Snc - <small>Montecchio Maggiore, Italy </small></div>
-				</div>
-
-				<div className="timeline-item">
-					<span className="date">February <strong>2021</strong> – July <strong>2021</strong></span>
-					<h4>Junior Full-Stack Developer</h4>
-					<div>Startel Solutions - <small>Torri di Quartesolo, Italy </small></div>
-				</div> */
 }

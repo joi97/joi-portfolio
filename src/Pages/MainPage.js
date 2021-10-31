@@ -3,6 +3,7 @@ import React from "react";
 import HomePage from "./HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutPage from "./AboutPage";
+import MyWorks from "./MyWorks";
 
 export default function MainPage() {
 	return (
@@ -18,7 +19,9 @@ export default function MainPage() {
 					<Route path="/about-me">
 						<AboutPage />
 					</Route>
-
+					<Route path="/my-works">
+						<MyWorks />
+					</Route>
 					<Route path="/">
 						<HomePage />
 					</Route>
