@@ -24,7 +24,7 @@ function MyWorks() {
 							<img src={work1} alt="portfolio"></img>
 						</div>
 						<h3 className="portfolio-item-title">
-							Kubera-108 web-site
+							Kubera-108 webSite
 						</h3>
 						<button type="button" className="p-btn view-project-btn">
 							view project

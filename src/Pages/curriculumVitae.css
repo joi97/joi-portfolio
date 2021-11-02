@@ -1,206 +1,217 @@
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-
-}
-
+} */
+/* 
 body{
   background: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+} */
+
+.section-cv {
+	width: 85%;
+	/* max-width: 1000px; */
+}
+.section-cv svg {
+	z-index: 1;
+	position: absolute;
+    left: 5px;
+    top: 5px;
+	color: white;
 }
 
-.container{
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  min-height: 1000px;
-  background: #fff;
-  margin: 50px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+.section-cv svg:hover {
+	color: var(--white-alpha-25);
 }
 
-
-.container .left_side{
-  position: relative;
-  background: #003147;
-  padding: 30px;
-}
-
-
-.profileText{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.2) ;
-}
-
-.profileText .imgBox{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-
-.profileText .imgBox img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.profileText h2{
-  color: #fff;
-  font-size: 1.5em;
-  margin-top: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  line-height: 1.4em;
-}
-
-.contactInfo{
-  padding-top: 40px;
-}
-
-.contactInfo ul{
-  position: relative;
-}
-
-.contactInfo ul li{
-  position: relative;
-  list-style: none;
-  margin: 10px 0;
-  cursor: pointer;
-}
-
-
-.contactInfo ul li .icon{
-  display: inline-block;
-  width: 30px;
-  font-size: 18px;
-  color: #03a9f4;
-}
-
-.contactInfo ul li span{
-  color:#fff;
-  font-weight: 300;
-}
-
-
-
-.contactInfo.education li{
-  margin-bottom: 15px;
-}
-
-.contactInfo.education h5{
-  font-weight: 500;
-  color: #03a9f4;
-}
-
-.contactInfo.education h4:nth-child(2){
-  font-weight: 500;
-  color: #fff;
-}
-
-.contactInfo.education h4{
-  font-weight: 200;
-  color: #fff;
-  font-size: 10px;
-}
-
-
-.contactInfo.language .percent{
-  position: relative;
-  width: 100%;
-  height: 3px;
-  background: #081921;
-  display: block;
-  margin-top: 5px;
-}
-
-.contactInfo.language .percent div{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height:  100%;
-  background: #03a9f4;
-}
-
-
-
-.container .right_side{
-  position: relative;
-  background: #fff;
-  padding: 30px;
-}
-
-.about{
-  margin-bottom: 10px;
-}
-
-.about:last-child{
-  margin-bottom: 0;
-}
-
-.title2{
-  color: #003147;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-p{
-  color: #333
+@media only screen and (max-width: 750px) {
+	.container-cv {
+        margin: 5px !important;
+	    grid-template-columns: auto !important;
+	}
+    
+    .container-cv .right_side-cv {
+        padding: 2px !important;
+    }
 
 }
 
-.about .box{
-  display: flex;
-  flex-direction: row;
-  margin: 20px 0;
+.container-cv {
+	position: relative;
+    max-width: 1000px;
+	width: 100%;
+	margin: 50px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	box-shadow: 20px 20px 15px rgb(0 0 0 / 60%);
 }
 
-.about .box .year_company{
-  min-width: 150px;
-}
-.about .box .year_company h5{
-  text-transform: uppercase;
-  color: #848c90;
-  font-weight: 500;
+.container-cv .left_side-cv {
+	position: relative;
+	background: #003147;
+	height: 100%;
+	padding: 30px;
 }
 
-.about .box .year_company h5 small{
-    font-size: 10px;
+.profileText-cv {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.about .box .text h4{
-  text-transform: uppercase;
-  color: #2a7da2;
-  font-size: 16px;
+.profileText-cv .imgBox-cv {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
 }
 
-.title{
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+.profileText-cv .imgBox-cv img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
+.profileText-cv h2 {
+	color: #fff;
+	font-size: 1.5em;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 500;
+	line-height: 1.4em;
+}
 
+.contactInfo-cv {
+	padding-top: 40px;
+}
 
+.contactInfo-cv ul {
+	position: relative;
+}
+
+.contactInfo-cv ul li {
+	position: relative;
+	list-style: none;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+.contactInfo-cv ul li .icon {
+	display: inline-block;
+	width: 30px;
+	font-size: 18px;
+	color: #03a9f4;
+}
+
+.contactInfo-cv ul li span {
+	color: #fff;
+	font-weight: 300;
+}
+
+.contactInfo-cv.education-cv li {
+	margin-bottom: 15px;
+}
+
+.contactInfo-cv.education-cv h5 {
+	font-weight: 500;
+	color: #03a9f4;
+}
+
+.contactInfo-cv.education-cv h4:nth-child(2) {
+	font-weight: 500;
+	color: #fff;
+}
+
+.contactInfo-cv.education-cv h4 {
+	font-weight: 200;
+	color: #fff;
+	font-size: 10px;
+}
+
+.contactInfo-cv.language-cv .percent {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	background: #081921;
+	display: block;
+	margin-top: 5px;
+}
+
+.contactInfo-cv.language-cv .percent div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #03a9f4;
+}
+
+.container-cv .right_side-cv {
+	position: relative;
+	background: #fff;
+	padding: 30px;
+}
+
+.about {
+	margin-bottom: 10px;
+}
+
+.about:last-child {
+	margin-bottom: 0;
+}
+
+.title2-cv {
+	color: #003147;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+p {
+	color: #333;
+}
+
+.about .box {
+	display: flex;
+	flex-direction: row;
+	margin: 20px 0;
+}
+
+.about .box .year_company {
+	min-width: 150px;
+}
+.about .box .year_company h5 {
+	text-transform: uppercase;
+	color: #848c90;
+	font-weight: 500;
+}
+
+.about .box .year_company h5 small {
+	font-size: 10px;
+}
+
+.about .box .text h4 {
+	text-transform: uppercase;
+	color: #2a7da2;
+	font-size: 16px;
+}
+
+.title-cv {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}

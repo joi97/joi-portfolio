@@ -151,14 +151,18 @@ export default function AboutPage(setPageCurrent, HomePage) {
 								transform: props.xys.interpolate(trans),
 							}}
 						>
-							
 							{/* <div className="div-overme">over me</div> */}
 							<img src={fotoProfilo} />
-						</animated.div>
 
-						<button className="p-btn" style={{ margin: "20px" }}>
-							Download CV
-						</button>
+							<Link to="/curriculum-vitae">
+								<button
+									className="p-btn"
+									style={{ margin: "20px" }}
+								>
+									Download CV
+								</button>
+							</Link>
+						</animated.div>
 					</div>
 
 					<div className="about-text">

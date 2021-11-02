@@ -4,20 +4,18 @@ import HomePage from "./HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutPage from "./AboutPage";
 import MyWorks from "./MyWorks";
+import CurriculumVitae from "./CurriculumVitae";
 
 export default function MainPage() {
 	return (
 		<>
-			{/* <div className="bg-circles">
-				<div className="circle-1"></div>
-				<div className="circle-2"></div>
-				<div className="circle-3"></div>
-				<div className="circle-4"></div> */}
-			
 			<Router>
 				<Switch>
 					<Route path="/about-me">
 						<AboutPage />
+					</Route>
+					<Route path="/curriculum-vitae">
+						<CurriculumVitae />
 					</Route>
 					<Route path="/my-works">
 						<MyWorks />
@@ -27,7 +25,6 @@ export default function MainPage() {
 					</Route>
 				</Switch>
 			</Router>
-            {/* </div> */}
 		</>
 	);
 }

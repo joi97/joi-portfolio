@@ -277,6 +277,7 @@ div.container {
 .about-img {
 	margin-bottom: auto;
 	padding: 0 30px;
+	display: inline-grid;
 	text-align-last: center;
 }
 
@@ -698,15 +699,15 @@ div.container {
 .portfolio-item{
 	width: calc((100%/2) -30px);
 	margin: 0 15px 30px;
+	text-align-last: center;
 }
+
 .portfolio-item h3{
 
 	text-transform: capitalize;
 	font-size: 20px;
-	margin: 20px 0;
-
+	margin: 5px 0;
 }
-
 
 .portfolio-item-thumbnail{
 	padding: 10px;
