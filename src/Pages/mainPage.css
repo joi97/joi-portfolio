@@ -697,9 +697,11 @@ div.container {
 
 /* mywork section */
 .portfolio-item{
-	width: calc((100%/2) -30px);
+	/* width: calc((100%/2) -30px); */
 	margin: 0 15px 30px;
-	text-align-last: center;
+	/* text-align-last: center; */
+	justify-content: center;
+
 }
 
 .portfolio-item h3{

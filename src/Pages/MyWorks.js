@@ -3,11 +3,10 @@ import HomeIcon from "@material-ui/icons/Home";
 import { Link } from "react-router-dom";
 import work1 from "../../src/progetto1.png";
 
-
 function MyWorks() {
 	return (
 		<section className="portfolio-section sec-padding">
-            <Link to="/">
+			<Link to="/">
 				<HomeIcon />
 			</Link>
 			<div className="container">
@@ -18,7 +17,7 @@ function MyWorks() {
 				</div>
 
 				<div className="row">
-                    {/* portofolio start */}
+					{/* portofolio start */}
 					<div className="portfolio-item">
 						<div className="portfolio-item-thumbnail">
 							<img src={work1} alt="portfolio"></img>
@@ -26,16 +25,22 @@ function MyWorks() {
 						<h3 className="portfolio-item-title">
 							Kubera-108 webSite
 						</h3>
-						<button type="button" className="p-btn view-project-btn">
-							view project
+						<button
+							type="button"
+							className="p-btn view-project-btn"
+						>
+							<a href="https://www.kubera-108.com/">
+								view project
+							</a>
 						</button>
 						<div className="portfolio-item-details">
 							<div className="description">
-							<ul>
+								<ul>
 									<li>
-									I created the site in wordpress and css for kubera: a brand of pants 
+										I created the site in wordpress and css
+										for kubera: a brand of pants
 									</li>
-							</ul>
+								</ul>
 							</div>
 							<div className="general-info">
 								<ul>
@@ -53,10 +58,10 @@ function MyWorks() {
 							</div>
 						</div>
 					</div>
-                    {/* portfolio end */}
-                    
+					{/* portfolio end */}
+
 					{/* nuova modifica */}
-                    {/* portofolio start */}
+					{/* portofolio start */}
 					{/* <div className="portfolio-item">
 						<div className="portfolio-item-thumbnail">
 							<img src="" alt="portfolio"></img>
@@ -90,7 +95,7 @@ function MyWorks() {
 							</div>
 						</div>
 					</div> */}
-                    {/* portfolio end */}
+					{/* portfolio end */}
 				</div>
 			</div>
 		</section>
