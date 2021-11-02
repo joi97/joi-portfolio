@@ -1,6 +1,3 @@
-
-
-// import AboutPage from './Pages/AboutPage';
 import MainPage from './Pages/MainPage';
 
 function App() {
