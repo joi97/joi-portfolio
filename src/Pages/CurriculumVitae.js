@@ -1,7 +1,7 @@
 import React from "react";
-import joiPhoto from "./img_portfolio.jpg";
+import joiPhoto from "./images/img-curriculum.jpg";
 import HomeIcon from "@material-ui/icons/Home";
-import "./curriculumVitae.css";
+import "./css/curriculumVitae.css";
 import { Link } from "react-router-dom";
 
 export default function CurriculumVitae() {

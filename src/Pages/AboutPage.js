@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import HomeIcon from "@material-ui/icons/Home";
-import fotoProfilo from "../../src/foto-profilo-sfondo.jpg";
+import fotoProfilo from "./images/img-aboutpage.jpg";
 import { Link } from "react-router-dom";
-import JsonData from "./experience_data.json";
-import { Paginator } from "primereact/paginator";
-import "./mainPage.css";
+import JsonData from "./json/experiencedata.json";
+import { useSpring, animated } from "react-spring";
+import "./css/mainPage.css";
+
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
-import { LocalGasStation } from "@material-ui/icons";
-import styled from "styled-components";
-import { useSpring, animated, config } from "react-spring";
+
 
 function Experience({ experienceData }) {
 	return (
@@ -87,18 +86,6 @@ function Education() {
 	);
 }
 
-const Container = styled(animated.div)``;
-
-// display: inline-block;
-// padding: 3em;
-// background: #c7d2fe66;
-// border-radius: 10px;
-// z-index: 1;
-// position: relative;
-// backdrop-filter: blur(10px);
-// border: 2px solid transparent;
-// background-clip: border-box;
-// cursor: pointer;
 const calc = (x, y) => [
 	-(y - window.innerHeight / 2) / 20,
 	(x - window.innerWidth / 2) / 20,
@@ -152,7 +139,7 @@ export default function AboutPage(setPageCurrent, HomePage) {
 							}}
 						>
 							{/* <div className="div-overme">over me</div> */}
-							<img src={fotoProfilo} />
+							<img src={fotoProfilo} alt=""/>
 
 							<Link to="/curriculum-vitae">
 								<button

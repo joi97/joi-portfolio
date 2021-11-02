@@ -1,6 +1,8 @@
 import { Facebook, Instagram } from "@material-ui/icons";
 import { Link } from "react-router-dom";
-import img1 from "../../src/imgFinale.png";
+import img1 from "./images/img-homepage.png";
+import "./css/mainPage.css";
+
 
 function HomePage({ setPageCurrent }) {
 	return (

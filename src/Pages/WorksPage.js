@@ -1,7 +1,7 @@
 import React from "react";
 import HomeIcon from "@material-ui/icons/Home";
 import { Link } from "react-router-dom";
-import work1 from "../../src/progetto1.png";
+import work1 from "./images/img-first-project.png";
 
 function MyWorks() {
 	return (

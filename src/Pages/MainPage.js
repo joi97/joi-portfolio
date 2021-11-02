@@ -1,9 +1,9 @@
-import "./mainPage.css";
+import "./css/mainPage.css";
 import React from "react";
 import HomePage from "./HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AboutPage from "./AboutPage";
-import MyWorks from "./MyWorks";
+import WorksPages from "./WorksPage";
 import CurriculumVitae from "./CurriculumVitae";
 
 export default function MainPage() {
@@ -18,7 +18,7 @@ export default function MainPage() {
 						<CurriculumVitae />
 					</Route>
 					<Route path="/my-works">
-						<MyWorks />
+						<WorksPages />
 					</Route>
 					<Route path="/">
 						<HomePage />
