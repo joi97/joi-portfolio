@@ -16,7 +16,7 @@ function MyWorks() {
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row" style={{textAlignLast: "center", justifyContent: "center"}}>
 					{/* portofolio start */}
 					<div className="portfolio-item">
 						<div className="portfolio-item-thumbnail">
@@ -25,14 +25,13 @@ function MyWorks() {
 						<h3 className="portfolio-item-title">
 							Kubera-108 webSite
 						</h3>
-						<button
+						<a
+							href="https://www.kubera-108.com/"
 							type="button"
 							className="p-btn view-project-btn"
 						>
-							<a href="https://www.kubera-108.com/">
-								view project
-							</a>
-						</button>
+							view project
+						</a>
 						<div className="portfolio-item-details">
 							<div className="description">
 								<ul>

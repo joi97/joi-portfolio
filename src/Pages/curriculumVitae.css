@@ -24,6 +24,9 @@ body{
     left: 5px;
     top: 5px;
 	color: white;
+    background: var(--white-alpha-40);
+    padding: 2px;
+    border-radius: 50%;
 }
 
 .section-cv svg:hover {
