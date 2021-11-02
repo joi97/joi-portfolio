@@ -491,17 +491,21 @@ div.container {
 /* responsive */
 
 @media (max-width: 855px) {
-	.container {
+	div.container {
 		padding: 0;
 	}
 
-	.home-text {
+	div.home-text {
 		text-align-last: center;
 	}
-	.row {
+	div.row {
+		display: grid ;
+		justify-content: center ;
+		text-align-last: start ;
+/* 		
 		display: grid !important;
 		justify-content: center !important;
-		text-align-last: start !important;
+		text-align-last: start !important; */
 		place-items: center;
 	}
 	.home-text,
@@ -526,6 +530,18 @@ div.container {
 	.home-text h2 {
 		font-size: 18px;
 	}
+	.about-text .timeline-item h4, .about-text .timeline-item div {
+		text-align: left;
+	}
+
+	.about-text {
+		width: 100%;
+	}
+
+	/* .about-text p{
+		text-align: left;
+	} */
+
 }
 
 @media (max-width: 1246px) {
@@ -534,11 +550,6 @@ div.container {
 	}
 }
 
-@media (max-width: 1246px) {
-	.home-section {
-		margin: 15px;
-	}
-}
 
 @keyframes zoomInOut {
 	0%,
@@ -681,3 +692,43 @@ div.container {
 	color: white;
 	background-color: var(--main-color);
 }
+
+
+/* mywork section */
+.portfolio-item{
+	width: calc((100%/2) -30px);
+	margin: 0 15px 30px;
+}
+.portfolio-item h3{
+
+	text-transform: capitalize;
+	font-size: 20px;
+	margin: 20px 0;
+
+}
+
+
+.portfolio-item-thumbnail{
+	padding: 10px;
+	background-color: var(--white-alpha-25);
+	border: 1px solid var(--white-alpha-40);
+	border-radius: 10px;
+}
+
+.portfolio-item-thumbnail img{
+	width: 100%;
+	border-radius: 10px;
+}
+
+.portfolio-item-details{
+	display: none;
+}
+
+.view-project-btn{
+	box-shadow: none;
+}
+
+.portfolio-section{
+	padding-bottom: 50px;
+}
+

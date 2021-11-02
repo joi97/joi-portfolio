@@ -21,20 +21,21 @@ function MyWorks() {
                     {/* portofolio start */}
 					<div className="portfolio-item">
 						<div className="portfolio-item-thumbnail">
-							<img src={work1} style={{width: "30%"}} alt="portfolio"></img>
+							<img src={work1} alt="portfolio"></img>
 						</div>
 						<h3 className="portfolio-item-title">
-							education course website
+							Kubera-108 web-site
 						</h3>
 						<button type="button" className="p-btn view-project-btn">
 							view project
 						</button>
 						<div className="portfolio-item-details">
 							<div className="description">
-								<p>
-									ASDADS ASDADSASDASD ASDADSASDASD
-									ASDADSASDASD
-								</p>
+							<ul>
+									<li>
+									I created the site in wordpress and css for kubera: a brand of pants 
+									</li>
+							</ul>
 							</div>
 							<div className="general-info">
 								<ul>
