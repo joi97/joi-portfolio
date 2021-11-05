@@ -3,6 +3,7 @@ import joiPhoto from "./images/img-curriculum.jpg";
 import HomeIcon from "@material-ui/icons/Home";
 import "./css/curriculumVitae.css";
 import { Link } from "react-router-dom";
+import WebIcon from "@material-ui/icons/Web";
 
 export default function CurriculumVitae() {
 	return (
@@ -40,24 +41,32 @@ export default function CurriculumVitae() {
 									<i
 										className="fa fa-envelope"
 										aria-hidden="true"
-									></i>{" "}
+									></i>
 								</span>
-								<span className="text">
-									{" "}
-									joi9719@hotmail.it{" "}
-								</span>
+								<span className="text">joi9719@hotmail.it</span>
 							</li>
 							<li>
 								<span className="icon">
 									<i
 										className="fa fa-map-marker"
 										aria-hidden="true"
-									></i>{" "}
+									></i>
 								</span>
 								<span className="text">
-									{" "}
-									Montecchio Maggiore,{" "}
+									Montecchio Maggiore,
 									<small> Vicenza </small>
+								</span>
+							</li>
+
+							<li>
+								<span className="icon">
+									<i
+										class="fas fa-portrait"
+										aria-hidden="true"
+									></i>
+								</span>
+								<span className="text">
+									joiberberi.netlify.app
 								</span>
 							</li>
 						</ul>
